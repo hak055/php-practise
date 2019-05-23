@@ -1,5 +1,9 @@
 .form {
-	width: 600px;
+	width: 500px;
 	background-color: #f7f7f7; 
 	border: 1px solid #ccc;
+}
+
+div.register_form {
+	display: none;
 }

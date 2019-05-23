@@ -13,22 +13,22 @@ class ManageUsers{
 
 	}
 
-	function registerUsers($username,$password,$ip_address,$reg_time,$reg_date){
-		$query = $this->link->prepare("INSERT INTO users (username,password,ip_address,reg_time,reg_date) VALUES (?,?,?,?,?)");
+	function registerUsers($username,$email,$password,$ip_address,$reg_time,$reg_date){
+		$query = $this->link->prepare("INSERT INTO users (username,email,password,ip_address,reg_time,reg_date) VALUES (?,?,?,?,?,?)");
 
-		$values = array($username,$password,$ip_address,$reg_time,$reg_date);
+		$values = array($username,$email,$password,$ip_address,$reg_time,$reg_date);
 		$query->execute($values);
 		$counts = $query->rowCount();
 
 		return $counts;
 	}
-
+	
 	function LoginUsers($username,$password){
 		$query = $this->link->query("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
 		$rowCount = $query->rowCount();
 		return $rowCount;
 	}
-
+	//
 	function GetUserInfo($username){
 		$query = $this->link->query("SELECT * FROM users WHERE username = '$username'");
 		$rowCount = $query->rowCount();
