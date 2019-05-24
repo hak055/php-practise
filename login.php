@@ -27,24 +27,29 @@ include_once ('libs/login_user.php');
 	</script>
 </head>
 <body>
-    <?php include_once ('nav.php');?>
+    <nav class="navbar navbar-dark bg-dark">
+  		 <a class="navbar-brand" href="#">Tutlage</a>
+  		 <span class="navbar-text">
+      			<a href="#">Some text</a>
+    	</span>
+    </nav>
     <?php 
     	if(isset($error))
     		echo '<div class="alert alert-error">'.$error.'</div>';
 
     ?>
     <div class="login_form"> 
-    	<form class="form p-3" action="" method="post">
+    	<form class="form p-3" action="login.php" method="post">
 		  <div class="form-group">
 		    <label><h1>Login here</h1></label>
 		  </div>
 		  <div class="form-group">
 		    <label>UserName</label>
-		    <input type="text" class="form-control" name="username" placeholder="username">
+		    <input type="text" class="form-control" name="login_username" placeholder="username">
 		  </div>
 		  <div class="form-group">
 		    <label>Password</label>
-		    <input type="password" name="password" class="form-control" placeholder="password">
+		    <input type="password" name="login_password" class="form-control" placeholder="password">
 		  </div>
 		  <button type="submit" name="login" class="btn btn-primary">Submit</button><br>
 		  <a href="#" id="show_register">Don't have an account ?</a>

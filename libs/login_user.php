@@ -34,7 +34,7 @@ if(isset($_POST['register']))
 		$check_availabilty = $users->GetUserInfo($username);
 		if($check_availabilty == 0)
 		{	//hashing password
-			$password = password_hash($password, PASSWORD_DEFAULT);
+			// $password = password_hash($password, PASSWORD_DEFAULT);
 			$register_user = $users->registerUsers($username,$email,$password,$ip_address,$time,$date);
 			if($register_user == 1)
 			{
@@ -53,4 +53,38 @@ if(isset($_POST['register']))
 		}
 	}
 	
-}
+};
+
+	if(isset($_POST['login']))
+	{
+		session_start();
+		include_once('classes/class.ManageUser.php');
+
+		$username = $_POST['login_username'];
+		$password = $_POST['login_password'];
+
+		if(empty($username) || empty($password))
+		{
+			$error = 'All fields are required';
+		}
+		else
+		{
+			// $password = password_hash($password, PASSWORD_DEFAULT);
+			$login_users = new ManageUsers();
+			$auth_user = $login_users->LoginUsers($username,$password);
+
+			if($auth_user == 1)
+			{
+				$make_sessions = $login_users->GetUserInfo($username);
+				foreach ($make_sessions as $value) {
+					$_SESSION['todo_name'] = $value['username'];
+					if(isset($_SESSION['todo_name']))
+					{
+						header("location: index.php");
+					}
+				}
+			}else{
+				$error = 'invalid data';
+			}
+		}
+	}
