@@ -7,3 +7,35 @@
 div.register_form {
 	display: none;
 }
+
+#td_container {
+	width: 1000px;
+	margin: auto;
+	padding-top: 40px;
+}
+#sidebar{
+	float: left;
+	width: 18%;
+	height: 80px;
+	padding-left: 40px;
+	background: #f7f7f7;
+}
+#sidebar li a{
+	padding: 3px 5px;
+}
+#mainContent {
+	float: right;
+	width: 72%;
+}
+#mainContent #head{
+	background: #f7f7f7;
+	border-bottom: 1px solid #ccc;
+	font-size: 14px;
+	padding: 5px;
+}
+#mainContent #head {
+	float: left;
+}
+#mainContent #head #add_more {
+	float: right;
+}
