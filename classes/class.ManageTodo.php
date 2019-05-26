@@ -55,4 +55,11 @@ class ManageTodo{
 
 		return $result;
 	}
+
+	public function deleteTodo($username,$id)
+	{
+		$query = $this->link->query("DELETE FROM todo WHERE username = '$username' AND id = '$id'");
+		$count = $query->rowCount();
+		return $counts;
+	}
 }
