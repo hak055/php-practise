@@ -3,7 +3,7 @@
 class dbConnection {
 
 	protected $db_conn;
-	public $db_name = 'tutlage';
+	public $db_name = 'php-practise';
 	public $db_user = 'root';
 	public $db_pass = '';
 	public $db_host = 'localhost';

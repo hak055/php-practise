@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 26 2019 г., 20:30
+-- Время создания: Май 26 2019 г., 20:54
 -- Версия сервера: 10.2.17-MariaDB-log
 -- Версия PHP: 7.2.10
 
@@ -19,25 +19,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `tutlage`
+-- База данных: `php-practise`
 --
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `todo`
---
-
-CREATE TABLE `todo` (
-  `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `description` text NOT NULL,
-  `due_date` varchar(200) NOT NULL,
-  `created_on` varchar(100) NOT NULL,
-  `status` varchar(100) NOT NULL,
-  `progress` int(11) DEFAULT 40
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -61,12 +44,6 @@ CREATE TABLE `users` (
 --
 
 --
--- Индексы таблицы `todo`
---
-ALTER TABLE `todo`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -77,16 +54,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT для таблицы `todo`
---
-ALTER TABLE `todo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

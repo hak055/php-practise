@@ -24,8 +24,8 @@
 			$create_todo = $init->createTodo($username,$title,$description,$due_date,$created_on,$status);
 			if($create_todo == 1)
 			{
-				header("location: index.php");
-				// $success = 'Todo Created Successfully';
+				// header("location: index.php");
+				$success = 'Todo Created Successfully';
 			}
 			else{
 				$error = 'There was an error';
