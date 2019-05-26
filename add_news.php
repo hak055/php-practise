@@ -1,6 +1,6 @@
-<?php 
-	include_once ('statics/header.php');
+<?php
 	include_once ('libs/create_todo.php');
+	include_once ('statics/header.php');
 
 ?>
 

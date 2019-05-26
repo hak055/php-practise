@@ -42,9 +42,14 @@ class ManageTodo{
 		return $result;
 	}
 
-	public function editTodo($username,$id,$values)
+	public function editTodo($username,$id,$title,$description,$due_date,$status,$progress=null)
 	{
-		//
+		$query = $this->link->query("UPDATE todo SET title = '$title', description = '$description', due_date = '$due_date', status = '$status' WHERE username = '$username' AND id = '$id'");
+
+		$counts = $query->rowCount();
+
+		return $counts;
+
 	}
 
 	public function showTodo($username,$id)
@@ -58,8 +63,8 @@ class ManageTodo{
 
 	public function deleteTodo($username,$id)
 	{
-		$query = $this->link->query("DELETE FROM todo WHERE username = '$username' AND id = '$id'");
+		$query = $this->link->query("DELETE FROM todo WHERE username = '$username' AND id = '$id' LIMIT 1");
 		$count = $query->rowCount();
 		return $counts;
 	}
-}
+}?>

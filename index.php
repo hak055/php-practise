@@ -1,7 +1,8 @@
-<?php 
+<?php
+    include_once ('libs/delete.php');
 	include_once ('statics/header.php');
 	include_once ('libs/list_todo.php');
-	include_once ('libs/delete.php');
+	
 ?>
 
 			<div id="mainContent">

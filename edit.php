@@ -1,11 +1,13 @@
-<?php 
+<?php
+    include_once ('libs/edit_todo.php');
 	include_once ('statics/header.php');
 	include_once ('libs/list_todo.php');
+	
 ?>
 
 <div id="mainContent">
 	
-		<form class="form p-3" action="add_news.php" method="post">
+		<form class="form p-3" action="edit.php?edit_id=<?=$_GET['edit_id'];?>" method="post">
 			<?php foreach($list_todo as $elem) {?>
 			<div class="form-group">
 		    	<label><h1>Edit Todo</h1></label>
@@ -36,7 +38,7 @@
 				</select>
 			</div>
 			<?php }?>
-			<button type="submit" name="create_todo" class="btn btn-primary" id="create_todo">Create Todo</button>
+			<button type="submit" name="edit_todo" class="btn btn-primary" id="create_todo">Create Todo</button>
 		</form>
 </div>
 

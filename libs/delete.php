@@ -10,7 +10,7 @@
     	$id = $_GET['delete'];
     	$delete = $init->deleteTodo($session_name,$id);
 
-    	if($delete == 1)
+    	if($delete)
     	{
     		header("location: index.php");
     	}

@@ -10,7 +10,10 @@
 	<title></title>
 </head>
 <body>
-	<div class="brand" style="width: 100%;background: #F3F0F0;height: 50px;"><a href="/"><h1>tutlage</h1></a></div>
+	<nav class="navbar navbar-expand-lg navbar-light">
+  		<a class="navbar-brand" href="/">tutlage</a>
+  		<a href="logout.php" class="nav justify-content-end">Logout</a>
+  	</nav>
 	
 
 			<div id="sidebar">

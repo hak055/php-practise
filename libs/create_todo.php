@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 	include_once('classes/class.ManageTodo.php');
 	$init = new ManageTodo();
 
@@ -25,10 +24,11 @@
 			$create_todo = $init->createTodo($username,$title,$description,$due_date,$created_on,$status);
 			if($create_todo == 1)
 			{
-				$success = 'Todo Created Successfully';
+				header("location: index.php");
+				// $success = 'Todo Created Successfully';
 			}
 			else{
 				$error = 'There was an error';
 			}
 		}
-	}
+	}?>
