@@ -41,4 +41,18 @@ class ManageTodo{
 		}
 		return $result;
 	}
+
+	public function editTodo($username,$id,$values)
+	{
+		//
+	}
+
+	public function showTodo($username,$id)
+	{
+		$query = $this->link->query("SELECT * FROM todo WHERE username = '$username' AND id = '$id'");
+
+		$result = $query->fetchAll();
+
+		return $result;
+	}
 }

@@ -53,7 +53,9 @@
 									  </div></td>';
 
 
-								      echo '<td>edit|delete</td>';
+								      echo '<td><a href="edit.php?edit_id='.$value['id'].'">edit</a>|
+								      <a href="?delete='.$value['id'].'">delete</a>
+								      </td>';
 								      echo '<tr>';
 							    }
 						}

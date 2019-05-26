@@ -10,7 +10,7 @@
 	<title></title>
 </head>
 <body>
-	<div class="brand" style="width: 100%;background: #F3F0F0;height: 50px;"><h1>tutlage</h1></div>
+	<div class="brand" style="width: 100%;background: #F3F0F0;height: 50px;"><a href="/"><h1>tutlage</h1></a></div>
 	
 
 			<div id="sidebar">
