@@ -12,10 +12,10 @@ class ManageTodo{
 		return $this->link;
 
 	}
-	public function createTodo($username,$title,$description,$due_date,$created_on,$lable)
+	public function createTodo($username,$title,$description,$due_date,$created_on,$status)
 	{
-		$query = $this->link->prepare("INSERT INTO todo (username,title,description,due_date,created_on,label) VALUES(?,?,?,?,?,?)");
-		$values = array($username,$title,$description,$due_date,$created_on,$lable);
+		$query = $this->link->prepare("INSERT INTO todo (username,title,description,due_date,created_on,status) VALUES(?,?,?,?,?,?)");
+		$values = array($username,$title,$description,$due_date,$created_on,$status);
 		$query->execute($values);
 		$counts = $query->rowCount();
 		return $counts;

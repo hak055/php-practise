@@ -8,9 +8,9 @@
 		$title = $_POST['title'];
 		$description = $_POST['description'];
 		$due_date = $_POST['due_date'];
-		$label = $_POST['label'];
+		$status = $_POST['label'];
 
-		if(empty($title) || empty($due_date) || empty($label))
+		if(empty($title) || empty($due_date) || empty($status))
 		{
 			$error = "All fields are required";
 		}
@@ -20,8 +20,9 @@
 			$description = htmlspecialchars($description);
 
 			$username = $session_name;
+
 			$created_on = date("Y-m-d");
-			$create_todo = $init->createTodo($username,$title,$description,$due_date,$created_on,$label);
+			$create_todo = $init->createTodo($username,$title,$description,$due_date,$created_on,$status);
 			if($create_todo == 1)
 			{
 				$success = 'Todo Created Successfully';

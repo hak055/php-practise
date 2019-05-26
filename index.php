@@ -16,7 +16,7 @@
 					  <thead>
 					    <tr>
 					      <th scope="col">Title</th>
-					      <th scope="col">Snippet</th>
+					      <th scope="col">Description</th>
 					      <th scope="col">Due Date</th>
 					      <th scope="col">Time Left</th>
 					      <th scope="col">Progress</th>
@@ -24,13 +24,44 @@
 					    </tr>
 					  </thead>
 					  <tbody>
-					    <tr>
-					      <th scope="row">1</th>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>12123</td>
-					      <td>25%</td>
-					      <td>edit|delete</td>
+					    
+					    <?php
+					    if($list_todo !== 0)
+					    {
+							    foreach ($list_todo as $key => $value)
+							    {
+							    	$due_date = strtotime($value['due_date']);
+							    	$today = strtotime("now");
+							    	$time_left = (($due_date - $today) / 3600) / 24;
+							    	if($time_left < 1)
+							    	{
+							    		$time_left = 'Less than one day';
+							    	}
+							    	else{
+							    		$time_left = round($time_left).' days remeining';
+							    	}
+							    	
+							    	echo '<tr>';
+							    	  echo '<th scope="row">'.$value['title'].'</th>';
+								      echo '<td>'.$value['description'].'</td>';
+								      echo '<td>'.$value['due_date'].'</td>';
+								      echo '<td>'.$time_left.'</td>';
+								      echo '<td><div class="progress">
+									    <div class="progress-bar" role="progressbar" aria-valuemin="0" style="width:'.$value['progress'].'%">
+									      '.$value['progress'].'
+									    </div>
+									  </div></td>';
+
+
+								      echo '<td>edit|delete</td>';
+								      echo '<tr>';
+							    }
+						}
+						else{
+							    	echo '<td><td><td><h1>List empty!</h1></td></td></td>';
+							    }
+					    ?>
+					     
 					    </tr>					   
 					  </tbody>
 					</table>					

@@ -15,8 +15,8 @@
 
 			<div id="sidebar">
 				<ul>
-					<li><a href="#"><i class="icon-book"></i>Inbpx</a></li>
-					<li><a href="#"><i class="icon-book"></i>Read Later</a></li>
-					<li><a href="#"><i class="icon-book"></i>Important</a></li>
+					<li><a href="index.php?label=inbox"><i class="icon-book"></i>Inbpx</a></li>
+					<li><a href="index.php?label=read_later"><i class="icon-book"></i>Read Later</a></li>
+					<li><a href="index.php?label=important"><i class="icon-book"></i>Important</a></li>
 				</ul>				
 			</div>
