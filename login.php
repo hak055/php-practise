@@ -33,11 +33,7 @@ include_once ('libs/login_user.php');
       			<a href="#">Some text</a>
     	</span>
     </nav>
-    <?php 
-    	if(isset($error))
-    		echo '<div class="alert alert-error">'.$error.'</div>';
-
-    ?>
+    
     <div class="login_form"> 
     	<form class="form p-3" action="login.php" method="post">
 		  <div class="form-group">
@@ -51,6 +47,10 @@ include_once ('libs/login_user.php');
 		    <label>Password</label>
 		    <input type="password" name="login_password" class="form-control" placeholder="password">
 		  </div>
+		    <?php 
+	    	if(isset($error))
+	    		echo '<div class="alert alert-error">'.$error.'</div>';
+    		?>
 		  <button type="submit" name="login" class="btn btn-primary">Submit</button><br>
 		  <a href="#" id="show_register">Don't have an account ?</a>
 		</form>

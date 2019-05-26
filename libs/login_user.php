@@ -34,7 +34,7 @@ if(isset($_POST['register']))
 		$check_availabilty = $users->GetUserInfo($username);
 		if($check_availabilty == 0)
 		{	//hashing password
-			// $password = password_hash($password, PASSWORD_DEFAULT);
+			$password = md5($password);
 			$register_user = $users->registerUsers($username,$email,$password,$ip_address,$time,$date);
 			if($register_user == 1)
 			{
@@ -69,7 +69,7 @@ if(isset($_POST['register']))
 		}
 		else
 		{
-			// $password = password_hash($password, PASSWORD_DEFAULT);
+			$password = md5($password);
 			$login_users = new ManageUsers();
 			$auth_user = $login_users->LoginUsers($username,$password);
 
