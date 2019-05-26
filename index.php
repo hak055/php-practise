@@ -1,4 +1,7 @@
-<?php include_once ('statics/header.php');?>
+<?php 
+	include_once ('statics/header.php');
+	include_once ('libs/list_todo.php');
+?>
 
 			<div id="mainContent">
 				<div id="head">

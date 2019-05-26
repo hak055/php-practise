@@ -7,11 +7,11 @@
 div.register_form {
 	display: none;
 }
-
-#td_container {
-	width: 1000px;
-	margin: auto;
-	padding-top: 40px;
+#td_container{
+	padding-top: 5px;
+}
+#mainContent{
+	padding-top: 5px;
 }
 #sidebar{
 	float: left;

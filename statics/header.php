@@ -1,3 +1,6 @@
+<?php 
+	include_once('libs/session.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +10,11 @@
 	<title></title>
 </head>
 <body>
-	<div class="brand" style="width: 100%;background: #BEDEFF;height: 50px;"><h1>tutlage</h1></div>
-	<div class="mainWrapper">
-		<div id="td_container">
+	<div class="brand" style="width: 100%;background: #F3F0F0;height: 50px;"><h1>tutlage</h1></div>
+	
 
 			<div id="sidebar">
-				<ul class="">
+				<ul>
 					<li><a href="#"><i class="icon-book"></i>Inbpx</a></li>
 					<li><a href="#"><i class="icon-book"></i>Read Later</a></li>
 					<li><a href="#"><i class="icon-book"></i>Important</a></li>
